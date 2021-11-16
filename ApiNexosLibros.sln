@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatosNexos", "DatosNexos\DatosNexos.csproj", "{BA354274-C827-4763-AA54-F53664D10202}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiNexosLibros", "ApiNexosLibros\ApiNexosLibros.csproj", "{A7F595B6-593C-42B0-9280-8CD7A293B993}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA354274-C827-4763-AA54-F53664D10202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA354274-C827-4763-AA54-F53664D10202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA354274-C827-4763-AA54-F53664D10202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA354274-C827-4763-AA54-F53664D10202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F595B6-593C-42B0-9280-8CD7A293B993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F595B6-593C-42B0-9280-8CD7A293B993}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F595B6-593C-42B0-9280-8CD7A293B993}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F595B6-593C-42B0-9280-8CD7A293B993}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E8E3134-2012-43DE-BA64-2BFEA2659728}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,39 @@
+<h1>Datos Registro</h1>
+
+<p>Componente de registro.</p>
+
+<p *ngIf="!registroPosts$"><em>Cargando...</em></p>
+
+<p>
+  <a [routerLink]="['/register-registro']">Nuevo Registro</a>
+</p>
+
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="(registroPosts$ | async)?.length>0">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nombre</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Correo</th>
+      <th>libros Maximos Registrados</th>
+      <th>CreacionAt</th>
+      <th>ActualizacionAt</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let registro of (registroPosts$ | async)">
+      <td>{{ registro.id }}</td>
+      <td>{{ registro.nombre }}</td>
+      <td>{{ registro.direccion }}</td>
+      <td>{{ registro.telefono }}</td>
+      <td>{{ registro.correo }}</td>
+      <td>{{ registro.librosMaximosRegistrados }}</td>
+      <td>{{ registro.creacionAt | date:'yyyy-MM-dd HH:mm'}}</td>
+      <td>{{ registro.actualizacionAt | date:'yyyy-MM-dd HH:mm'}}</td>
+      <td><a [routerLink]="['/registro/edit/', registro.id]">Editar</a> | <a [routerLink]="" (click)="delete(registro.id)">Eliminar</a></td>
+    </tr>
+  </tbody>
+</table>

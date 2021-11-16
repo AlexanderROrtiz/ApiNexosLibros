@@ -1,0 +1,37 @@
+<h1>Datos Autores</h1>
+
+<p>Componente de autores.</p>
+
+<p *ngIf="!autorPosts$"><em>Cargando...</em></p>
+
+<p>
+  <a [routerLink]="['/register-autor']">Crear Autor</a>
+</p>
+
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="(autorPosts$ | async)?.length>0">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>NombreCompleto</th>
+      <th>FechaNacimiento</th>
+      <th>CiudadProcedencia</th>
+      <th>Correo</th>
+      <th>CreacionAt</th>
+      <th>ActualizacionAt</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let autor of (autorPosts$ | async)">
+      <td>{{ autor.id }}</td>
+      <td>{{ autor.nombreCompleto }}</td>
+      <td>{{ autor.fechaNacimiento }}</td>
+      <td>{{ autor.ciudadProcedencia }}</td>
+      <td>{{ autor.correo }}</td>
+      <td>{{ autor.creacionAt | date:'yyyy-MM-dd HH:mm'}}</td>
+      <td>{{ autor.actualizacionAt | date:'yyyy-MM-dd HH:mm'}}</td>
+      <td><a [routerLink]="['/autor/edit/', autor.id]">Editar</a> |<a [routerLink]="" (click)="delete(autor.id)">Eliminar</a></td>
+    </tr>
+  </tbody>
+</table>

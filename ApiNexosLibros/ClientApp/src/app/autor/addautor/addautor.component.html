@@ -1,0 +1,54 @@
+<h1>{{titlePage}}</h1>
+<h4>Crer Autores</h4>
+<hr />
+
+<form [formGroup]="autorForm" (ngSubmit)="save()" #formDir="ngForm" novalidate>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="NombreCompleto">Nombre Completo <span>*</span></label>
+        <input type="text" class="form-control" formControlName="NombreCompleto">
+        <span class="alert alert-danger" *ngIf="NombreCompleto.invalid && formDir.submitted">Por favor ingrese el nombre completo</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label for="FechaNacimiento">Fecha de Nacimiento <span>*</span></label>
+        <input type="date" class="form-control" formControlName="FechaNacimiento">
+        <span class="alert alert-danger" *ngIf="FechaNacimiento.invalid && formDir.submitted">Por favor ingrese la fecha de nacimiento</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="Correo">Correo <span>*</span></label>
+        <input type="email" class="form-control" formControlName="Correo" email="true">
+        <span class="alert alert-danger" *ngIf="Correo.invalid && formDir.submitted">Por favor ingrese el correo</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label for="CiudadProcedencia">Ciudad de procedencia <span>*</span></label>
+        <input type="text" class="form-control" formControlName="CiudadProcedencia">
+        <span class="alert alert-danger" *ngIf="CiudadProcedencia.invalid && formDir.submitted">Por favor ingrese la ciudad de procedencia</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <button class="btn btn-info" (click)="cancel()">Cancel</button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <button type="submit" class="btn btn-success btn-block">Save</button>
+      </div>
+    </div>
+  </div>
+</form>
+

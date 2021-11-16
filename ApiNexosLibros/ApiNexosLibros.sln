@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiNexosLibros", "ApiNexosLibros.csproj", "{CF39D14F-75F9-4C2B-9D4B-C67F41664F1D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatosNexos", "..\DatosNexos\DatosNexos.csproj", "{C4FDB65E-D701-4993-A081-E8C6F1F16721}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF39D14F-75F9-4C2B-9D4B-C67F41664F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF39D14F-75F9-4C2B-9D4B-C67F41664F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF39D14F-75F9-4C2B-9D4B-C67F41664F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF39D14F-75F9-4C2B-9D4B-C67F41664F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4FDB65E-D701-4993-A081-E8C6F1F16721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4FDB65E-D701-4993-A081-E8C6F1F16721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4FDB65E-D701-4993-A081-E8C6F1F16721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4FDB65E-D701-4993-A081-E8C6F1F16721}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E63F9C1A-009D-4F23-B68A-C5FF64F3C57B}
+	EndGlobalSection
+EndGlobal

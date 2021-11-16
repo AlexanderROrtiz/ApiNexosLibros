@@ -1,0 +1,85 @@
+<h1>{{titlePage}}</h1>
+<h3>Agregar Libros</h3>
+<hr />
+<div *ngIf="errorMessage">
+  <p class="alert alert-danger">{{ errorMessage }}</p>
+</div>
+<br />
+<form [formGroup]="libroForm" (ngSubmit)="save()" #formDir="ngForm" novalidate>
+  
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="titulo">Titulo <span>*</span></label>
+        <input type="text" class="form-control" formControlName="titulo">
+        <span class="alert alert-danger" *ngIf="titulo.invalid && formDir.submitted">Por favor ingresa el Titulo.</span>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <label for="anio">Año  <span>*</span></label>
+        <input type="text" class="form-control" formControlName="anio">
+        <span class="alert alert-danger" *ngIf="anio.invalid && formDir.submitted">Por favor ingresa el Año</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="genero">Genero <span>*</span></label>
+        <input type="text" class="form-control" formControlName="genero">
+        <span class="alert alert-danger" *ngIf="genero.invalid && formDir.submitted">Por favor ingresa el nombre</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label for="numeroPaginas">Numero de Paginas <span>*</span></label>
+        <input type="number" class="form-control" formControlName="numeroPaginas">
+        <span class="alert alert-danger" *ngIf="numeroPaginas.invalid && formDir.submitted">Por favor ingresa el numero de paginas</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="registroId">Nombre Registro <span>*</span></label>
+        <select class="form-control" data-val="true" formControlName="registroId">
+          <option value="">--Seleccione Registro--</option>
+          <option *ngFor="let registro of listRegistro" value={{registro.id}}>
+            {{registro.nombre}}
+          </option>
+        </select>
+        <span class="alert alert-danger" *ngIf="registrorId.invalid && formDir.submitted">Por favor ingresa el registro</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label for="autorId">Autor <span>*</span></label>
+        <select class="form-control" data-val="true" formControlName="autorId">
+          <option value="">--Seleccione Autor--</option>
+          <option *ngFor="let autor of listAutor" value={{autor.id}}>
+            {{autor.nombreCompleto}}
+          </option>
+        </select>
+        <span class="alert alert-danger" *ngIf="autorId.invalid && formDir.submitted">Por favor ingresa el autor</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <button class="btn btn-info" (click)="cancel()">Cancel</button>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <button type="submit" class="btn btn-success btn-block">Save</button>
+      </div>
+    </div>
+  </div>
+
+</form>

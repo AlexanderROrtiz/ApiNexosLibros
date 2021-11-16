@@ -1,0 +1,40 @@
+<h1>Datos Libros</h1>
+
+<p>Componente Libros</p>
+
+<p *ngIf="!libroPosts$"><em>Cargando...</em></p>
+
+<p>
+  <a [routerLink]="['/register-libro']">Crear Libros</a>
+</p>
+
+<table class='table' *ngIf="(libroPosts$ | async)?.length>0">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Anio</th>
+      <th>Titulo</th>
+      <th>Genero</th>
+      <th>NumeroPaginas</th>
+      <th>Registro</th>
+      <th>Autor</th>
+      <th>CreacionAt</th>
+      <th>ActualizacionAt</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let libro of (libroPosts$ | async)">
+      <td>{{ libro.id }}</td>
+      <td>{{ libro.anio }}</td>
+      <td>{{ libro.titulo }}</td>
+      <td>{{ libro.genero }}</td>
+      <td>{{ libro.numeroPaginas }}</td>
+      <td>{{ libro.registro.nombre }}</td>
+      <td>{{ libro.autor.nombreCompleto }}</td>
+      <td>{{ libro.creacionAt | date:'yyyy-MM-dd HH:mm'}}</td>
+      <td>{{ libro.actualizacionAt | date:'yyyy-MM-dd HH:mm'}}</td>
+      <td><a [routerLink]="['/libro/edit/', libro.id]">Editar</a> |<a [routerLink]="" (click)="delete(libro.id)">Eliminar</a></td>
+    </tr>
+  </tbody>
+</table>
